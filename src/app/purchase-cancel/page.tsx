@@ -43,7 +43,7 @@ const CancelPage = () => {
           </div>
           <div className="space-y-4">
             <Link
-              href="/page/homepage"
+              href="/"
               className="w-full bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center justify-center"
             >
               <ArrowLeft className="mr-2" size={18} />

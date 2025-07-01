@@ -39,7 +39,7 @@ const CartPage = () => {
   return (
     <div className="min-h-screen px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 pb-20 md:pb-8 lg:pb-8">
       <Link
-        href="/page/homepage"
+        href="/"
         className="flex items-center gap-2 mt-6 mb-6 text-primary hover:text-blue-900"
       >
         <ChevronLeft size={20} /> Back To Homepage

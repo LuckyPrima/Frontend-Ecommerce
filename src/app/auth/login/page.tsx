@@ -5,8 +5,8 @@ import { LogIn, Mail, Lock, ArrowRight, Loader } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { useUserStore } from "../../../stores/useUserStore";
 import { useRouter } from "next/navigation";
+import { useUserStore } from "../../../stores/useUserStore";
 import LoadingSpinner from "../../../components/LoadingSpinner";
 
 const LoginPage = () => {
@@ -22,7 +22,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (user) {
-      router.replace("/page/homepage");
+      router.replace("/");
     }
   }, [user, router]);
 

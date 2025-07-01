@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CategoryList from "../../../components/CategoryList";
-import LoadingSpinner from "../../../components/LoadingSpinner";
 
-import Slider from "../../../components/Slider";
-import axios from "../../../lib/axios";
-import ProductCard from "../../../components/ProductCard";
-import { handleErrorToast } from "../../../utils/toastUtils";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import CategoryList from "../../components/CategoryList";
+import axios from "../../lib/axios";
+import { handleErrorToast } from "../../utils/toastUtils";
+import Slider from "../../components/Slider";
+import ProductCard from "../../components/ProductCard";
 
 const categories = [
   { href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },

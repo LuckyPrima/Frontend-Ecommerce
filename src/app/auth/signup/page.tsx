@@ -6,8 +6,8 @@ import { UserPlus, Mail, Lock, User, ArrowRight, Loader } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useUserStore } from "../../../stores/useUserStore";
 import LoadingSpinner from "../../../components/LoadingSpinner";
+import { useUserStore } from "../../../stores/useUserStore";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const SignUpPage = () => {
 
   useEffect(() => {
     if (user) {
-      router.replace("/page/homepage");
+      router.replace("/");
     }
   }, [user, router]);
 

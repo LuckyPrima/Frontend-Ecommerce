@@ -130,7 +130,7 @@ const SuccessPage = () => {
               Thanks for trusting us!
             </button>
             <Link
-              href="/page/homepage"
+              href="/"
               className="w-full bg-slate-300 hover:bg-gray-400 text-primary font-bold py-2 px-4 
             rounded-lg transition duration-300 flex items-center justify-center"
             >
