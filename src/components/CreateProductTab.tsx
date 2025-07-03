@@ -333,8 +333,8 @@ const CreateProductTab = () => {
                   key={index}
                   src={img}
                   alt={`img-${index}`}
-                  fill
-                  sizes="100%"
+                  width={500}
+                  height={500}
                   className="w-full h-32 object-cover rounded"
                 />
               </div>
