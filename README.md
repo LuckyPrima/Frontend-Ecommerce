@@ -1,4 +1,4 @@
-Here's a README for your "Frontend-Ecommerce" GitHub repository:
+![preview image website](img/Screenshot%202025-07-07%20210734.png)
 
 # Frontend E-commerce Application
 
