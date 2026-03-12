@@ -47,16 +47,16 @@ const HomePage = () => {
   return (
     <div className="">
       <Slider />
-      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 ">
-        <h1 className="text-2xl font-bold mb-6">Explore Our Categories</h1>
+      <div className="mt-32 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Explore Our Categories</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {categories.map((category) => (
             <CategoryList category={category} key={category.name} />
           ))}
         </div>
       </div>
-      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 ">
-        <h1 className="text-2xl font-bold mb-6">Featured Product</h1>
+      <div className="mt-32 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">Featured Product</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {featuredProducts.length > 0 ? (
             featuredProducts.map((product) => (
@@ -70,8 +70,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
-        <h1 className="text-2xl font-bold mb-6">New Arrivals</h1>
+      <div className="mt-32 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">New Arrivals</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {newProducts.length > 0 ? (
             newProducts.map((product) => (

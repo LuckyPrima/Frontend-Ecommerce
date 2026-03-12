@@ -32,8 +32,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link href={`/product/${product.id}`}>
-      <div className="flex flex-col w-full h-full relative overflow-hidden rounded-lg shadow-lg bg-white group">
-        <div className="relative w-full h-60 overflow-hidden rounded-t-lg">
+      <div className="flex flex-col w-full h-full relative overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 bg-white border border-gray-100 group">
+        <div className="relative w-full h-60 overflow-hidden rounded-t-2xl">
           <Image
             src={imageUrl}
             alt={product.name}
@@ -57,7 +57,7 @@ const ProductCard = ({ product }) => {
           </div>
 
           <button
-            className="flex items-center justify-center w-full rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
+            className="flex items-center justify-center w-full rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-800 transition-all mt-4 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 duration-300"
             onClick={handleAddToCart}
           >
             <ShoppingCart size={22} className="mr-2" />

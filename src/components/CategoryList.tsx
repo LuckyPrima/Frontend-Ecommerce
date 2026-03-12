@@ -5,7 +5,7 @@ import React from "react";
 const CategoryList = ({ category }) => {
   return (
     <div className="px-4">
-      <div className="relative overflow-hidden h-96 w-full rounded-lg group">
+      <div className="relative overflow-hidden h-96 w-full rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
         <Link href={"/category" + category.href}>
           <div className="w-full h-full cursor-pointer">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50 z-10" />

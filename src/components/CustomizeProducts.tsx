@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const CustomizeProducts = ({ colors, sizes }) => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -17,41 +18,49 @@ const CustomizeProducts = ({ colors, sizes }) => {
   }, [colors, sizes]);
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-8 w-full">
       {/* Choose a Color */}
       {colors && colors.length > 0 && (
-        <>
-          <h4 className="font-medium">Choose a Color</h4>
-          <ul className="flex items-center gap-3">
+        <div className="space-y-4">
+          <h4 className="font-bold text-slate-800 tracking-wide text-sm uppercase opacity-80">Color Options</h4>
+          <ul className="flex flex-wrap items-center gap-4">
             {colors.map((color, index) => (
               <li
                 key={index}
-                className={`w-8 h-8 rounded-full ring-1 ring-gray-300 cursor-pointer relative`}
+                className={`w-11 h-11 rounded-full cursor-pointer relative flex items-center justify-center shadow-sm transition-transform duration-300 hover:scale-110`}
                 style={{ backgroundColor: color }}
+                title={color}
                 onClick={() => setSelectedColor(color)}
               >
                 {selectedColor === color && (
-                  <div className="absolute w-10 h-10 rounded-full ring-2 ring-primary top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  <motion.div
+                    layoutId="colorRing"
+                    className="absolute w-14 h-14 rounded-full ring-2 ring-primary border-4 border-white"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  />
                 )}
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
 
       {/* Choose a Size */}
       {sizes && sizes.length > 0 && (
-        <>
-          <h4 className="font-medium">Choose a Size</h4>
-          <ul className="flex items-center gap-3">
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h4 className="font-bold text-slate-800 tracking-wide text-sm uppercase opacity-80">Size Select</h4>
+          </div>
+          <ul className="flex flex-wrap items-center gap-3">
             {sizes.map((size, index) => (
               <li
                 key={index}
-                className={`ring-1 ring-primary rounded-md py-1 px-4 text-sm cursor-pointer
+                className={`flex-1 min-w-[3.5rem] sm:flex-none text-center rounded-xl py-2.5 px-6 font-semibold text-sm transition-all duration-300 cursor-pointer border
                   ${
                     selectedSize === size
-                      ? "bg-primary text-white"
-                      : "text-primary hover:bg-gray-100"
+                      ? "bg-primary text-white border-primary shadow-lg shadow-primary/30 transform scale-105"
+                      : "bg-white text-slate-600 border-slate-200 hover:border-primary/50 hover:bg-slate-50 hover:shadow-sm"
                   }`}
                 onClick={() => setSelectedSize(size)}
               >
@@ -59,7 +68,7 @@ const CustomizeProducts = ({ colors, sizes }) => {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
     </div>
   );

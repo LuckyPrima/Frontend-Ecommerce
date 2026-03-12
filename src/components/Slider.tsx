@@ -11,7 +11,7 @@ const slides = [
     description: "Sale! Up to 50% off!",
     img: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "/",
-    bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
+    bg: "bg-gradient-to-r from-stone-50 to-white",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const slides = [
     description: "Sale! Up to 50% off!",
     img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "/",
-    bg: "bg-gradient-to-r from-pink-50 to-blue-50",
+    bg: "bg-gradient-to-r from-zinc-50 to-white",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const slides = [
     description: "Sale! Up to 50% off!",
     img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "/",
-    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
+    bg: "bg-gradient-to-r from-gray-50 to-white",
   },
 ];
 
@@ -54,14 +54,14 @@ const Slider = () => {
           >
             {/* TEXT SECTION */}
             <div className="h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:px-12 text-center">
-              <h2 className="text-xl lg:text-3xl 2xl:text-5xl">
+              <h2 className="text-xl lg:text-3xl 2xl:text-5xl text-gray-500">
                 {slides.description}
               </h2>
-              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">
+              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-medium tracking-tight">
                 {slides.title}
               </h1>
               <Link href={slides.url}>
-                <button className="rounded-md bg-black text-white py-3 px-4">
+                <button className="rounded-full bg-black text-white hover:bg-gray-800 transition-colors py-3 px-8 text-sm font-medium mt-4">
                   SHOP NOW
                 </button>
               </Link>

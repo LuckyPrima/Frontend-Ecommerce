@@ -17,6 +17,7 @@ export default function AppWrapper({
   const isAdminPage = pathname.startsWith("/admin-dashboard");
   const isEditProductPage = /^\/products\/[^/]+\/edit$/.test(pathname);
   const isDetailsProductPage = /^\/products\/[^/]+\/details$/.test(pathname);
+  const isPublicProductPage = /^\/product\/[^/]+$/.test(pathname);
 
   const { checkAuth, checkingAuth } = useUserStore();
 
@@ -34,11 +35,14 @@ export default function AppWrapper({
     return <LoadingSpinner />;
   }
 
-  const contentPaddingClass = !isAuthPage ? "pt-20" : "";
+  // We want to hide navbar on auth and public product pages (to allow full screen experience)
+  const hideNavbar = isAuthPage || isPublicProductPage;
+  // Adjust padding if navbar is hidden or it's an admin page
+  const contentPaddingClass = hideNavbar ? "" : "pt-20";
 
   return (
     <>
-      {!isAuthPage && (
+      {!hideNavbar && (
         <Suspense fallback={<div>Loading navigation...</div>}>
           <Navbar />
         </Suspense>
